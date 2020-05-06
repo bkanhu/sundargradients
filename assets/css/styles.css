@@ -27,7 +27,8 @@ body {
 .navbar-light {
   border-bottom: solid 1px #E5E5E5;
   background: #FFFFFF;
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 4px 20px 0px rgba(0,0,0,0.15);
+  /* box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08); */
 }
 .nav-item{
   margin: 0 3px;
