@@ -1,6 +1,6 @@
 # snGradients
 
-#### Handpicked collection of beautiful gradients
+#### Handpicked collection of more than 100 beautiful gradients to use in your next project.
 
 ![snGradients](assets/img/snGradients002.png)
 
