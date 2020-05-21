@@ -3,12 +3,96 @@
   margin: 0;
   box-sizing: border-box;
 }
+:root {
 
+  --bg-color: #fff;
+  --nav-color:#f8f8f8;
+  --border-color: #e5e5e5;
+  --text-color: #000;
+  
+}
+
+[data-theme="dark"] {
+  
+  --bg-color: #393e46;
+  --nav-color: #25252599;
+  --border-color: #818cab;
+  --text-color: #eeeeee;
+}
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #23232e;
+}
+::-webkit-scrollbar-thumb {
+  background: #66bb6a;
+}
 .navbar {
   padding: 0 35px 0 35px;
   margin-bottom: 25px;
 }
+.nav .right{
+  /* float: right; */
+  display: flex;
+  flex-direction: row;
+  /* list-style: none; */
+  padding: 15px 30px;
+  /* float: right; */
+}
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+}
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
 
+.theme-switch input {
+  display:none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
 h3.brand {
   background: -webkit-linear-gradient(45deg, #2E3192, #1bffff);
   -webkit-background-clip: text;
@@ -16,7 +100,7 @@ h3.brand {
 }
 
 body {
-  background: #f6f6f6;
+  background: var(--bg-color);
 }
 
 .containers {
@@ -25,31 +109,22 @@ body {
 }
 
 .navbar-light {
-  border-bottom: solid 1px #E5E5E5;
-  background: #FFFFFF;
+  border-bottom: solid 1px var( --border-color);
+  background: var(--nav-color) !important;
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
 }
 
-.nav-item {
-  margin: 0 3px;
+li.nav-item{
+  margin: 10px 15px 0;
 }
-
 .btn {
   padding: 2px 4px !important;
 }
 
-.btn-fb {
-  background: #3b5998;
-  color: #fff;
-}
 
-.btn-fb:hover {
-  background: #2f4779;
-  color: #fff;
-}
 
 .btn-git {
-  background: #24292e;
+  background: #525558;
   color: #FFF;
 }
 
@@ -59,7 +134,7 @@ body {
 }
 
 .swatch_container {
-  background: #fff;
+  background: var(--nav-color);
   box-shadow: 0 10px 15px rgba(36, 37, 38, 0.08);
   margin: 12px 0;
 }
@@ -74,6 +149,7 @@ body {
   text-align: left;
   text-transform: uppercase;
   font-size: 15px;
+  color: var(--text-color);
 }
 
 .swatch_value {

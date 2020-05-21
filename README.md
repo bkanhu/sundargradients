@@ -2,7 +2,7 @@
 
 #### Handpicked collection of more than 100 beautiful gradients to use in your next project.
 
-![snGradients](assets/img/snGradients002.png)
+![snGradients](ss.png)
 
-#### Demo
+#### live view
 See the Website: (http://kanhucharan.me/snGradients/)
